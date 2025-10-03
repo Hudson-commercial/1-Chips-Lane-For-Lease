@@ -28,21 +28,24 @@
          background: #070e33 !important;
          }
          /*portfolio */
-         .portfolio {
+         .property-images {
          background: whitesmoke;
          padding-top: 4em;
          padding-bottom: 4em;
          margin-top: 0em;
          margin-bottom: 4em;
-         height: 180em;
+         height: auto;
          }     .margin-top-title {
          margin-top: 5em;
          } 
-         footer{
+         footer {
          position: relative;
-         top: 17em;
+         top: 74em;
          }
-         .portfolio-info {
+         .position-realtive {
+         position: relative;
+         }
+         .image-info {
          text-align: center;
          color: gray;
          }
@@ -60,8 +63,8 @@
          .form , .text-lg-start{
          }
          .list-group-horizontal>.list-group-item.active {
-         background: #424f4a !important;
-         border-color:#424f4a;
+         background: rgb(19, 145, 73, 1.0) !important;
+         border-color: rgb(19, 145, 73, 1.0);
          }
          .image-class {
          padding-right: 1em;
@@ -72,7 +75,7 @@
          height: 350px;
          object-fit: cover;
          }
-         .portfolio-wrap {
+         . {
          width: 100%;
          height: 350px;
          margin: 0px;
@@ -81,7 +84,7 @@
          padding-bottom: 1.6em;
          }
          .row-img {
-         margin-bottom: 1em;
+         /*         margin-bottom: 1em;*/
          }
          .font-biger {
          font-size: 3em;
@@ -92,8 +95,7 @@
          line-height: 1.9em;
          }
          /*       end of portfolio*/
-
-                  .main-av {
+         .main-av {
          margin-top: 20px;
          position: absolute;
          top: 27.4%;
@@ -126,11 +128,9 @@
          box-shadow:0 19px 38px rgba(0,0,0,0.30) !important;
          background: #0c1926 !important;
          }
-                @media screen and (max-width: 1369px) {
+         @media screen and (max-width: 1369px) {
          .brand-yellow {
-
          width: 21em !important;
- 
          }
          }
          @media screen and (max-width: 1174px) {
@@ -144,12 +144,6 @@
          .nav-right {
          position: absolute;
          right: 0%;
-         }
-         }
-         @media screen and (max-width: 1000px) {
-         footer{
-         position: relative;
-         top: 64em;
          }
          }
          @media screen and (max-width: 990px) {
@@ -188,17 +182,42 @@
          color: whitesmoke !important;
          }
          }
-         @media screen and (max-width: 945px) {
+         @media screen and (max-width: 990px) {
          .main-av{
          position: absolute;
          top: .3em !important;
          font-size: 3em !important;
          }
+         #contact{
+         position: absolute;
+         top: 500em;
+         min-width: 100vw;
+         }
          }
          @media screen and (max-width: 1200px) {
-         footer{
+         #contact{
+         position: absolute;
+         top: 970em;
+         min-width: 100vw;
+         }
+         @media screen and (max-width: 990px) {
+         .main-av{
+         position: absolute;
+         top: .3em !important;
+         font-size: 3em !important;
+         }
+         #contact{
+         position: absolute;
+         top: 810em;
+         min-width: 100vw;
+         }
+         }
+         @media screen and (max-width: 765px) {
+         #contact{
          position: relative;
-         top: 150em;
+         top: 330em !important;
+         min-height: 50em;
+         }
          }
          .about-h1 {
          margin-top: .5em !important;
@@ -276,13 +295,12 @@
          background-repeat: no-repeat;
          position: relative;
          }
-
          .main {
          margin-top: 4em;
          }
          .about-h1{
          font-size: 5em;
-         margin-top: 2em;
+         margin-top: 0em;
          text-align: center;
          color: rgb(47, 48, 56);
          }
@@ -368,6 +386,9 @@
          }
          .facts-title {
          }
+         .custom-list-group-button {
+         box-shadow: 5px 5px 10px rgba(55, 94, 148, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.4) !important;
+         }
          .bg-dark-green {
          background: #5E716A;
          }
@@ -431,780 +452,820 @@
          .footer-top  {
          padding-top: 10%;
          }
+         .card-image-div img {
+         opacity: 1;
+         display: block;
+         width: 100%;
+         height: auto;
+         transition: .4s ease;
+         }
+         .image-links {
+         width: 100%;
+         transition: .4s ease;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         text-align: center;
+         visibility: hidden;
+         }          .image-links a{
+         color: #424f4a !important;
+         }
+         .card-image-div:hover img {
+         opacity: 0.3;
+         }
+         .card-image-div:hover .image-links {
+         visibility: visible;
+         } 
+         .thumbnail-container {
+         position: relative;
+         overflow: hidden;
+         border-radius: 8px; /* Adds rounded corners */
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease-in-out;
+         }
+         .thumbnail-container:hover {
+         transform: scale(1.05); /* Slight zoom effect on hover */
+         }
+         .overlay {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background-color: rgba(0, 0, 0, 0.6);
+         color: white;
+         opacity: 0;
+         transition: opacity 0.3s ease-in-out;
+         }
+         .thumbnail-container:hover .overlay {
+         opacity: 1;
+         }
+         .overlay-content {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         text-align: center;
+         }
+         .overlay-title {
+         font-size: 1.5rem;
+         font-weight: bold;
+         }
+         .overlay-text {
+         font-size: 0.9rem;
+         }
+         .right-office-space-about img {
+         max-height: 40em;
+         }
+         .nav-blue-color {
+         color: #070e33 !important;
+         }
       </style>
    </head>
    <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <a class="navbar-brand " href="#">
-            <h1 class="barnd-h1 text-white-light"></i>For Lease</h1>
-         </a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse nav-right" id="navbarTogglerDemo01">
-            <ul class="navbar-nav">
-               <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-               </li>
-               <li class="nav-item ">
-                  <a class="nav-link" href="#about">About</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="https://hudsoncommercial.com/properties/">Properties</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link " href="#cntact">Contact</a>
-               </li>
-            </ul>
-         </div>
-      </nav>
-      <header class="banner">
-        <!--  <h1 class="main-av">1 Chips Lane</h1> -->
-      </header>
-      <div class="main">
-         <h1 class="about-h1">About</h1>
-<!--          <div class="words-hr"></div>
- -->         <div class="about">
-            <div class="container-open">
-               <div class="row">
-                  <div class="col-xl-6">
-                     
-                        
-                   <img src="https://images1.loopnet.com/i2/FsvvhQeVkSVo5bAsKZZLQJMS0H1lFkY-yp4iF5qgNZk/116/1-Chips-Ln-Fishkill-NY-DSCN1562-20-LargeHighDefinition.jpg" class="img-fluid">
-               
-                 
-                  </div>
-                  <div class="col-xl-6">
-                     <div class="right-office-space-about" id="about">
-                        <h2 class="office-space">The Space For Lease</h2>
-                        <br>
-                        <p class="large-paragraph">1 Chips Lane is a large freestanding industrial building with first-level industrial, manufacturing, warehouse space, and production offices, and second-level executive offices. The facility is equipped with two interior loading docks, 1 exterior loading dock, and 20' ceilings. The site offers municipal water and sewer, natural gas, office area central air, and forced hot air.
-                           <br>
-                           <br>
-                        </p>
-                        <p class="quick-facts-title">Key Info</p>
-                        <ul>
-                           <li>For Lease: Yes</li>
-                           <li> Type:   Industrial</li>
-                           <li>Zoning: GB </li>
-                           <li>Price: $10.50 NNN</li>
-                           <li>Year Built: 1980</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
+      <div class="d-flex, flex-column and min-vh-100 ">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand " href="#">
+               <h1 class="barnd-h1 text-white-light"></i>For Lease</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-right" id="navbarTogglerDemo01">
+               <ul class="navbar-nav">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item ">
+                     <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="https://hudsoncommercial.com/properties/">Properties</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link " href="#contact">Contact</a>
+                  </li>
+               </ul>
             </div>
-         </div>
-         <div class="about-2">
-            <div class="container-open">
-               <div class="row ">
-                  <div class="col-xl-6">
-                     <div class="well-2 ">
-                        <center>
-                           <div class=" facts-title">
-                              <h2 class="text-center h2-desc ">Property Facts</h2>
-<!--                               <div class="words-hr"></div>
- -->                           </div>
-                        </center>
-                        <center>
-                           <div class="card card-5 mt-4 p-3 facts-card">
-                              <ul class="list-group  ">
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Price
-                                    <span class="badge indigo darken-4 indigo darken-4 badge bg-dark-green ms-2">$10.50 NNN</span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    No. Stories
-                                    <span class="badge bg-dark-green ms-2">2</span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Property Type
-                                    <span class="badge badge bg-dark-green ms-2">Industrial</span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Year Built
-                                    <span class="badge bg-dark-green ms-2">1980</span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Ceiling Height
-                                    <span class="badge bg-dark-green ms-2">15.4' to +20' </span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Docks
-                                    <span class="badge bg-dark-green ms-2">2</span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Drive In
-                                    <span class="badge bg-dark-green ms-2">1</span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Lot Size
-                                    <span class="badge bg-dark-green ms-2">.82 AC</span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Address
-                                    <span class="badge bg-dark-green ms-2"> 1 Chips Ln, Fishkill, NY 12524</span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Available
-                                    <span class="badge bg-dark-green ms-2"> 19,800</span>
-                                 </li>
-                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Property Sub-type
-                                    <span class="badge bg-dark-green ms-2">Flex</span>
-                                 </li>
-                              </ul>
+         </nav>
+         <header class="banner">
+            <!--  <h1 class="main-av">1 Chips Lane</h1> -->
+         </header>
+         <div class="main flex-grow-1">
+            <h1 class="about-h1">About</h1>
+            <!--          <div class="words-hr"></div>
+               -->         
+            <div class="about">
+               <div class="container-open">
+                  <div class="row">
+                     <div class="col-xl-6">
+                        <div class=" right-office-space-about  p-4">
+                           <div class="thumbnail-container ">
+                              <img src="https://images1.loopnet.com/i2/FsvvhQeVkSVo5bAsKZZLQJMS0H1lFkY-yp4iF5qgNZk/116/1-Chips-Ln-Fishkill-NY-DSCN1562-20-LargeHighDefinition.jpg" >
+                              <div class="overlay">
+                                 <div class="overlay-content">
+                                    <h4 class="overlay-title">The Industrial Space </h4>
+                                    <p class="overlay-text">High quality manufacturing facility</p>
+                                 </div>
+                              </div>
                            </div>
-                        </center>
+                        </div>
                      </div>
-                  </div>
-                  <div class="col-xl-6"><img src="https://images1.loopnet.com/i2/0IyX6IdFEp6_497Y-wXzvlfGHkoPtuumRNCMgZM2jUU/116/1-Chips-Ln-Fishkill-NY-DSCN1576-25-LargeHighDefinition.jpg" class=" img-fluid-fill"></div>
-               </div>
-            </div>
-         </div>
-         <div class=" text-white about-three">
-            <div class=" container">
-               <div class="row">
-                  <div class="col-lg-3 ">
-                     <div class="icon-div-holder text-center">
-                        <i class="fas fa-map-marker color-dark-green"></i>
-                        <h3>Where</h3>
-                        <p class="card-text">11 min drive to train station</p>
-                     </div>
-                  </div>
-                  <div class="col-lg-3">
-                     <div class="icon-div-holder text-center">
-                        <i class="fas fa-building color-dark-green"></i>
-                        <h3>Type</h3>
-                        <p class="card-text">Built with sheet metal  </p>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 ">
-                     <div class="icon-div-holder text-center">
-                        <i class="fas fa-dollar-sign color-dark-green"></i>
-                        <h3>Price</h3>
-                        <p class="card-text"> Askinng price is $10.50 NNN</p>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 ">
-                     <div class="icon-div-holder text-center">
-                        <i class="fas fa-clipboard-list color-dark-green"></i>
-                        <h3>Built</h3>
-                        <p class="card-text">Year Built Renovated 1980/2002</p>
+                     <div class="col-xl-6">
+                        <div class="right-office-space-about card" id="about">
+                           <h2 class="office-space">The Space For Lease</h2>
+                           <br>
+                           <p class="large-paragraph ">1 Chips Lane is a large freestanding industrial building with first-level industrial, manufacturing, warehouse space, and production offices, and second-level executive offices. The facility is equipped with two interior loading docks, 1 exterior loading dock, and 20' ceilings. The site offers municipal water and sewer, natural gas, office area central air, and forced hot air.
+                              <br>
+                              <br>
+                           </p>
+                           <p class="quick-facts-title">Key Info</p>
+                           <ul>
+                              <li>For Lease: Yes</li>
+                              <li> Type:   Industrial</li>
+                              <li>Zoning: GB </li>
+                              <li>Price: $10.50 NNN</li>
+                              <li>Year Built: 1980</li>
+                           </ul>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
-         <!-- ======= Portfolio Section ======= -->
-         <section id="portfolio" class="portfolio section-bg">
-            <div class="container aos-init aos-animate" data-aos="fade-up">
-               <div class="section-title-port margin-top-title">
-                  <h2 class="margin-top-title light-blue mt-5 font-biger">Property Images </h2>
-                  <p class="font-partly-biger-2"></p>
+            <div class="about-2">
+               <div class="container-open">
+                  <div class="row ">
+                     <div class="col-xl-6">
+                        <div class="well-2 ">
+                           <center>
+                              <div class=" facts-title">
+                                 <h2 class="text-center h2-desc ">Property Facts</h2>
+                                 <!--                               <div class="words-hr"></div>
+                                    -->                           
+                              </div>
+                           </center>
+                           <center>
+                              <div class="card card-5 mt-4 p-3 facts-card">
+                                 <ul class="list-group  ">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Price
+                                       <span class="badge indigo darken-4 indigo darken-4 badge bg-dark-green ms-2">$10.50 NNN</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       No. Stories
+                                       <span class="badge bg-dark-green ms-2">2</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Property Type
+                                       <span class="badge badge bg-dark-green ms-2">Industrial</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Year Built
+                                       <span class="badge bg-dark-green ms-2">1980</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Ceiling Height
+                                       <span class="badge bg-dark-green ms-2">15.4' to +20' </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Docks
+                                       <span class="badge bg-dark-green ms-2">2</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Drive In
+                                       <span class="badge bg-dark-green ms-2">1</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Lot Size
+                                       <span class="badge bg-dark-green ms-2">.82 AC</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Address
+                                       <span class="badge bg-dark-green ms-2"> 1 Chips Ln, Fishkill, NY 12524</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Available
+                                       <span class="badge bg-dark-green ms-2"> 19,800</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                       Property Sub-type
+                                       <span class="badge bg-dark-green ms-2">Flex</span>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </center>
+                        </div>
+                     </div>
+                     <div class="col-xl-6"><img src="https://images1.loopnet.com/i2/0IyX6IdFEp6_497Y-wXzvlfGHkoPtuumRNCMgZM2jUU/116/1-Chips-Ln-Fishkill-NY-DSCN1576-25-LargeHighDefinition.jpg" class=" img-fluid-fill"></div>
+                  </div>
                </div>
-               <div class=" margin-top-title portfolio-area ">
-                  <div class="col-lg-12 d-flex justify-content-center aos-init aos-animate me-auto-port">
-                     <div class="list-group list-group-dark list-group-horizontal" id="list-tab" role="tablist">
-                        <a
-                           class="list-group-item list-group-item-action active "
-                           id="list-home-list"
-                           data-mdb-toggle="list"
-                           href="#list-home"
-                           role="tab"
-                           aria-controls="list-home"
-                           >All</a
-                           >
-                        <a
-                           class="list-group-item list-group-item-action"
-                           id="list-profile-list"
-                           data-mdb-toggle="list"
-                           href="#list-profile"
-                           role="tab"
-                           aria-controls="list-profile"
-                           > OFFICE</a
-                           >
-                        <a
-                           class="list-group-item list-group-item-action"
-                           id="list-messages-list"
-                           data-mdb-toggle="list"
-                           href="#list-messages"
-                           role="tab"
-                           aria-controls="list-messages"
-                           >INDUSTRIAL</a
-                           >
-               
+            </div>
+            <div class=" text-white about-three">
+               <div class=" container">
+                  <div class="row">
+                     <div class="col-lg-3 ">
+                        <div class="icon-div-holder text-center">
+                           <i class="fas fa-map-marker color-dark-green"></i>
+                           <h3>Where</h3>
+                           <p class="card-text">11 min drive to train station</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-3">
+                        <div class="icon-div-holder text-center">
+                           <i class="fas fa-building color-dark-green"></i>
+                           <h3>Type</h3>
+                           <p class="card-text">Built with sheet metal  </p>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 ">
+                        <div class="icon-div-holder text-center">
+                           <i class="fas fa-dollar-sign color-dark-green"></i>
+                           <h3>Price</h3>
+                           <p class="card-text"> Askinng price is $10.50 NNN</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 ">
+                        <div class="icon-div-holder text-center">
+                           <i class="fas fa-clipboard-list color-dark-green"></i>
+                           <h3>Built</h3>
+                           <p class="card-text">Year Built Renovated 1980/2002</p>
+                        </div>
                      </div>
                   </div>
-                  <div class="container margin-top-title text-center-2">
-                     <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                           <div class=" portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 651.852px;">
-                              <div class="row g-0 row-img">
-                                 <div class="col-xl-4  portfolio-item filter-app" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/zwP6uz2QQ-kxy065ol4FH5xURaS-fYGUeUXLykzG5CA/116/1-Chips-Ln-Fishkill-NY-DSCN1534-1-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="https://images1.loopnet.com/i2/zwP6uz2QQ-kxy065ol4FH5xURaS-fYGUeUXLykzG5CA/116/1-Chips-Ln-Fishkill-NY-DSCN1534-1-LargeHighDefinition.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-4  portfolio-item filter-web" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/KXw411Cdsbsm3_FGoJyT9XDEVkEAQvacezRGOLwub4o/116/1-Chips-Ln-Fishkill-NY-DSCN1544-7-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-4 portfolio-item filter-app" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/iGzlrSiYX8F1toe7ifHh4sAgZ26tRZL0A4t1LMZknNc/116/1-Chips-Ln-Fishkill-NY-DSCN1539-3-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="row g-0 row-img">
-                                 <div class="col-xl-4 portfolio-item filter-card" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/XtkodlOBoaaHvI0PxVJL_j23qSDPZeMz7EkS1KRpFMI/116/1-Chips-Ln-Fishkill-NY-DSCN1543-6-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="https://images1.loopnet.com/i2/N-892rqFHo8FPlwBw0VeECHCpCPnW-ve3788kNPhElE/116/1-Chips-Ln-Fishkill-NY-DSCN1541-5-LargeHighDefinition.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-4 portfolio-item filter-web">
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/SOfENNiK-OiyzqgsOTvSL7vZRANc1p_3nDDZ642vNpM/116/1-Chips-Ln-Fishkill-NY-DSCN1545-8-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-4  portfolio-item filter-app" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/P2URQWwbdLTSIaxcgRRuJw4r5oy5gRVsYfIoIRzsCYM/116/1-Chips-Ln-Fishkill-NY-DSCN1548-9-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-       
-
-                                              <div class="row g-0 row-img">
-                                 <div class="col-xl-4  portfolio-item filter-card" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/uFoJc5_-CJIJyGJ7jdJnm0FXXNnzAKCWoLQtM_-TdIM/116/1-Chips-Ln-Fishkill-NY-DSCN1549-10-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="erico-marcelino-91QHQ3GGh9I-unsplash.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-4  portfolio-item filter-card" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/OedJJ_VJtV4YPPXO2UC_xXR1spQwnGjE6XiLTi5gtJE/116/1-Chips-Ln-Fishkill-NY-DSCN1592-32-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="kristina-delp-2aox5dyd2SY-unsplash.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-4  portfolio-item filter-web">
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/GG1-G4ut74hNusoyK0sh59BUKF_c4xlYm5yDUeaqVxc/116/1-Chips-Ln-Fishkill-NY-DSCN1553-13-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-                               <div class="row g-0 row-img">
-                                 <div class="col-xl-4  portfolio-item filter-card" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/9AED0dkCS5baLWCkUFc_A9T9jUawp0k73pA3QJJZjf8/116/1-Chips-Ln-Fishkill-NY-DSCN1554-14-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="erico-marcelino-91QHQ3GGh9I-unsplash.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-4  portfolio-item filter-card" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/cwe5RaKCZ1fCBbC6SRKkjzDBqgR7GrtTVVTABBBQdb4/116/1-Chips-Ln-Fishkill-NY-DSCN1556-15-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="kristina-delp-2aox5dyd2SY-unsplash.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="col-xl-4  portfolio-item filter-web">
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/znK2Mw6yhcPCpTKdBO9_Gyz-0n_b5eF3SPWJ8R3GfFA/116/1-Chips-Ln-Fishkill-NY-DSCN1557-16-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
+               </div>
+            </div>
+            <!-- ======= Portfolio Section ======= -->
+            <section id="portfolio" class=" property-images position-relative">
+               <div class="container aos-init aos-animate" data-aos="fade-up">
+                  <div class="section-title-port margin-top-title">
+                     <h2 class="margin-top-title light-blue mt-5 font-biger">Property Images </h2>
+                     <p class="font-partly-biger-2"></p>
+                  </div>
+                  <div class=" margin-top-title portfolio-area ">
+                     <div class="col-lg-12 d-flex justify-content-center aos-init aos-animate me-auto-port">
+                        <div class="list-group list-group-dark list-group-horizontal nav-pills" id="list-tab" role="tablist">
+                           <a
+                              class="list-group-item list-group-item-action active custom-list-group-button"
+                              id="list-home-list"
+                              data-mdb-toggle="list"
+                              href="#list-home"
+                              role="tab"
+                              aria-controls="list-home"
+                              >All</a
+                              >
+                           <a
+                              class="list-group-item list-group-item-action custom-list-group-button"
+                              id="list-profile-list"
+                              data-mdb-toggle="list"
+                              href="#list-profile"
+                              role="tab"
+                              aria-controls="list-profile"
+                              > OFFICE</a
+                              >
+                           <a
+                              class="list-group-item list-group-item-action custom-list-group-button"
+                              id="list-messages-list"
+                              data-mdb-toggle="list"
+                              href="#list-messages"
+                              role="tab"
+                              aria-controls="list-messages"
+                              >INDUSTRIAL</a
+                              >
+                        </div>
+                     </div>
+                     <div class="container margin-top-title text-center-2">
+                        <div class="tab-content" id="nav-tabContent">
+                           <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                              <div class=" portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 651.852px;">
                                  <div class="row g-0 row-img">
-                                 <div class="col-xl-4  portfolio-item filter-card" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/ZsgsmrDY8RTJxmGqWd1SuCnV6lhP9qvpnK8inbZaWmg/116/1-Chips-Ln-Fishkill-NY-DSCN1558-17-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="erico-marcelino-91QHQ3GGh9I-unsplash.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class=" card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/zwP6uz2QQ-kxy065ol4FH5xURaS-fYGUeUXLykzG5CA/116/1-Chips-Ln-Fishkill-NY-DSCN1534-1-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/zwP6uz2QQ-kxy065ol4FH5xURaS-fYGUeUXLykzG5CA/116/1-Chips-Ln-Fishkill-NY-DSCN1534-1-LargeHighDefinition.jpg" class="" title="App 1"><i class="fas fa-images fa-2x "></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div filter-web" >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/KXw411Cdsbsm3_FGoJyT9XDEVkEAQvacezRGOLwub4o/116/1-Chips-Ln-Fishkill-NY-DSCN1544-7-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/KXw411Cdsbsm3_FGoJyT9XDEVkEAQvacezRGOLwub4o/116/1-Chips-Ln-Fishkill-NY-DSCN1544-7-LargeHighDefinition.jpg" class="" title="Web 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4 card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/iGzlrSiYX8F1toe7ifHh4sAgZ26tRZL0A4t1LMZknNc/116/1-Chips-Ln-Fishkill-NY-DSCN1539-3-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/iGzlrSiYX8F1toe7ifHh4sAgZ26tRZL0A4t1LMZknNc/116/1-Chips-Ln-Fishkill-NY-DSCN1539-3-LargeHighDefinition.jpg" class="" title="App 2"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="col-xl-4  portfolio-item filter-card" >
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/hyoH0WCjTD59pLQeR342i8HIyQXZoHZWSFq-RPqsJnA/116/1-Chips-Ln-Fishkill-NY-DSCN1560-18-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="kristina-delp-2aox5dyd2SY-unsplash.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                 <div class="row g-0 row-img">
+                                    <div class="col-xl-4 card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/XtkodlOBoaaHvI0PxVJL_j23qSDPZeMz7EkS1KRpFMI/116/1-Chips-Ln-Fishkill-NY-DSCN1543-6-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/N-892rqFHo8FPlwBw0VeECHCpCPnW-ve3788kNPhElE/116/1-Chips-Ln-Fishkill-NY-DSCN1541-5-LargeHighDefinition.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x fa-2x ps-4 "></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4 card-image-div filter-web">
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/SOfENNiK-OiyzqgsOTvSL7vZRANc1p_3nDDZ642vNpM/116/1-Chips-Ln-Fishkill-NY-DSCN1545-8-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/SOfENNiK-OiyzqgsOTvSL7vZRANc1p_3nDDZ642vNpM/116/1-Chips-Ln-Fishkill-NY-DSCN1545-8-LargeHighDefinition.jpg" class="" title="Web 2"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/P2URQWwbdLTSIaxcgRRuJw4r5oy5gRVsYfIoIRzsCYM/116/1-Chips-Ln-Fishkill-NY-DSCN1548-9-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/P2URQWwbdLTSIaxcgRRuJw4r5oy5gRVsYfIoIRzsCYM/116/1-Chips-Ln-Fishkill-NY-DSCN1548-9-LargeHighDefinition.jpg" class="" title="App 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="col-xl-4  portfolio-item filter-web">
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/947WMgMmcM0IGHgZrl1pYzzC7rTh7BcZ2YeI-5whDOE/116/1-Chips-Ln-Fishkill-NY-DSCN1561-19-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                 <div class="row g-0 row-img">
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/uFoJc5_-CJIJyGJ7jdJnm0FXXNnzAKCWoLQtM_-TdIM/116/1-Chips-Ln-Fishkill-NY-DSCN1549-10-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/uFoJc5_-CJIJyGJ7jdJnm0FXXNnzAKCWoLQtM_-TdIM/116/1-Chips-Ln-Fishkill-NY-DSCN1549-10-LargeHighDefinition.jpg" class="" title="Card 1"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/OedJJ_VJtV4YPPXO2UC_xXR1spQwnGjE6XiLTi5gtJE/116/1-Chips-Ln-Fishkill-NY-DSCN1592-32-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/OedJJ_VJtV4YPPXO2UC_xXR1spQwnGjE6XiLTi5gtJE/116/1-Chips-Ln-Fishkill-NY-DSCN1592-32-LargeHighDefinition.jpg" class="" title="Card 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div filter-web">
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/GG1-G4ut74hNusoyK0sh59BUKF_c4xlYm5yDUeaqVxc/116/1-Chips-Ln-Fishkill-NY-DSCN1553-13-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/GG1-G4ut74hNusoyK0sh59BUKF_c4xlYm5yDUeaqVxc/116/1-Chips-Ln-Fishkill-NY-DSCN1553-13-LargeHighDefinition.jpg" class="" title="Web 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row g-0 row-img">
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/9AED0dkCS5baLWCkUFc_A9T9jUawp0k73pA3QJJZjf8/116/1-Chips-Ln-Fishkill-NY-DSCN1554-14-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/9AED0dkCS5baLWCkUFc_A9T9jUawp0k73pA3QJJZjf8/116/1-Chips-Ln-Fishkill-NY-DSCN1554-14-LargeHighDefinition.jpg" class="" title="Card 1"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/cwe5RaKCZ1fCBbC6SRKkjzDBqgR7GrtTVVTABBBQdb4/116/1-Chips-Ln-Fishkill-NY-DSCN1556-15-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/cwe5RaKCZ1fCBbC6SRKkjzDBqgR7GrtTVVTABBBQdb4/116/1-Chips-Ln-Fishkill-NY-DSCN1556-15-LargeHighDefinition.jpg" class="" title="Card 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div filter-web">
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/znK2Mw6yhcPCpTKdBO9_Gyz-0n_b5eF3SPWJ8R3GfFA/116/1-Chips-Ln-Fishkill-NY-DSCN1557-16-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/znK2Mw6yhcPCpTKdBO9_Gyz-0n_b5eF3SPWJ8R3GfFA/116/1-Chips-Ln-Fishkill-NY-DSCN1557-16-LargeHighDefinition.jpg" class="" title="Web 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row g-0 row-img">
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/ZsgsmrDY8RTJxmGqWd1SuCnV6lhP9qvpnK8inbZaWmg/116/1-Chips-Ln-Fishkill-NY-DSCN1558-17-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/ZsgsmrDY8RTJxmGqWd1SuCnV6lhP9qvpnK8inbZaWmg/116/1-Chips-Ln-Fishkill-NY-DSCN1558-17-LargeHighDefinition.jpg" class="" title="Card 1"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/hyoH0WCjTD59pLQeR342i8HIyQXZoHZWSFq-RPqsJnA/116/1-Chips-Ln-Fishkill-NY-DSCN1560-18-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/hyoH0WCjTD59pLQeR342i8HIyQXZoHZWSFq-RPqsJnA/116/1-Chips-Ln-Fishkill-NY-DSCN1560-18-LargeHighDefinition.jpg" class="" title="Card 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div filter-web">
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/947WMgMmcM0IGHgZrl1pYzzC7rTh7BcZ2YeI-5whDOE/116/1-Chips-Ln-Fishkill-NY-DSCN1561-19-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/947WMgMmcM0IGHgZrl1pYzzC7rTh7BcZ2YeI-5whDOE/116/1-Chips-Ln-Fishkill-NY-DSCN1561-19-LargeHighDefinition.jpg" class="" title="Web 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row g-0 row-img">
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/FsvvhQeVkSVo5bAsKZZLQJMS0H1lFkY-yp4iF5qgNZk/116/1-Chips-Ln-Fishkill-NY-DSCN1562-20-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/FsvvhQeVkSVo5bAsKZZLQJMS0H1lFkY-yp4iF5qgNZk/116/1-Chips-Ln-Fishkill-NY-DSCN1562-20-LargeHighDefinition.jpg" class="" title="Card 1"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div " >
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/9ZJzIj-yI6Offd4ICa1UR6E32UT4k0dFiJ4cFeQgYi8/116/1-Chips-Ln-Fishkill-NY-DSCN1565-21-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/9ZJzIj-yI6Offd4ICa1UR6E32UT4k0dFiJ4cFeQgYi8/116/1-Chips-Ln-Fishkill-NY-DSCN1565-21-LargeHighDefinition.jpg" class="" title="Card 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xl-4  card-image-div filter-web">
+                                       <div class="card pt-3 m-2">
+                                          <img src="https://images1.loopnet.com/i2/6U0izfnmRUoxsKAfJLK4XhjM0Omxz0nE9Y1fklkVqWU/116/1-Chips-Ln-Fishkill-NY-DSCN1568-22-LargeHighDefinition.jpg" class="image-class" alt="">
+                                          <div class="image-info">
+                                             <div class="image-links ">
+                                                <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                                <a href="https://images1.loopnet.com/i2/6U0izfnmRUoxsKAfJLK4XhjM0Omxz0nE9Y1fklkVqWU/116/1-Chips-Ln-Fishkill-NY-DSCN1568-22-LargeHighDefinition.jpg" class="" title="Web 3"><i class="fas fa-images fa-2x"></i></a>
+                                                <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-
-
+                           </div>
+                           <!--      PICTURES FOR OFFICE -->
+                           <!--       tab pane end and start -->
+                           <div class="tab-pane fade margin-top-title" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                              <div class="row row-img">
+                                 <div class="col-xl-4  card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/KXw411Cdsbsm3_FGoJyT9XDEVkEAQvacezRGOLwub4o/116/1-Chips-Ln-Fishkill-NY-DSCN1544-7-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/KXw411Cdsbsm3_FGoJyT9XDEVkEAQvacezRGOLwub4o/116/1-Chips-Ln-Fishkill-NY-DSCN1544-7-LargeHighDefinition.jpg" class="" title="App 1"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4  card-image-div filter-web" >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/iGzlrSiYX8F1toe7ifHh4sAgZ26tRZL0A4t1LMZknNc/116/1-Chips-Ln-Fishkill-NY-DSCN1539-3-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/iGzlrSiYX8F1toe7ifHh4sAgZ26tRZL0A4t1LMZknNc/116/1-Chips-Ln-Fishkill-NY-DSCN1539-3-LargeHighDefinition.jpg" class="" title="Web 3"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4  card-image-div ">
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/XtkodlOBoaaHvI0PxVJL_j23qSDPZeMz7EkS1KRpFMI/116/1-Chips-Ln-Fishkill-NY-DSCN1543-6-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/XtkodlOBoaaHvI0PxVJL_j23qSDPZeMz7EkS1KRpFMI/116/1-Chips-Ln-Fishkill-NY-DSCN1543-6-LargeHighDefinition.jpg" class="" title="App 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
                               <div class="row g-0 row-img">
-                                 <div class="col-xl-4  portfolio-item filter-card" >
-                                    <div class="portfolio-wrap">
+                                 <div class="col-xl-4  card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/SOfENNiK-OiyzqgsOTvSL7vZRANc1p_3nDDZ642vNpM/116/1-Chips-Ln-Fishkill-NY-DSCN1545-8-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/SOfENNiK-OiyzqgsOTvSL7vZRANc1p_3nDDZ642vNpM/116/1-Chips-Ln-Fishkill-NY-DSCN1545-8-LargeHighDefinition.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4  card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/uFoJc5_-CJIJyGJ7jdJnm0FXXNnzAKCWoLQtM_-TdIM/116/1-Chips-Ln-Fishkill-NY-DSCN1549-10-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/uFoJc5_-CJIJyGJ7jdJnm0FXXNnzAKCWoLQtM_-TdIM/116/1-Chips-Ln-Fishkill-NY-DSCN1549-10-LargeHighDefinition.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4  card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/OedJJ_VJtV4YPPXO2UC_xXR1spQwnGjE6XiLTi5gtJE/116/1-Chips-Ln-Fishkill-NY-DSCN1592-32-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/OedJJ_VJtV4YPPXO2UC_xXR1spQwnGjE6XiLTi5gtJE/116/1-Chips-Ln-Fishkill-NY-DSCN1592-32-LargeHighDefinition.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row g-0 row-img">
+                                 <div class="col-xl-4  card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/GG1-G4ut74hNusoyK0sh59BUKF_c4xlYm5yDUeaqVxc/116/1-Chips-Ln-Fishkill-NY-DSCN1553-13-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/GG1-G4ut74hNusoyK0sh59BUKF_c4xlYm5yDUeaqVxc/116/1-Chips-Ln-Fishkill-NY-DSCN1553-13-LargeHighDefinition.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4  card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://ahprd1cdn.csgpimgs.com/i2/vSc9yvqrYFr3m0WrJ0VmAoQFQoxOsDMppEZCenKxbfU/116/image.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://ahprd1cdn.csgpimgs.com/i2/vSc9yvqrYFr3m0WrJ0VmAoQFQoxOsDMppEZCenKxbfU/116/image.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4  card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/N-892rqFHo8FPlwBw0VeECHCpCPnW-ve3788kNPhElE/116/1-Chips-Ln-Fishkill-NY-DSCN1541-5-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/N-892rqFHo8FPlwBw0VeECHCpCPnW-ve3788kNPhElE/116/1-Chips-Ln-Fishkill-NY-DSCN1541-5-LargeHighDefinition.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--    PICTURES FOR INDUSTRIAL -->
+                           <!--       tab pane end and start -->
+                           <div class="tab-pane margin-top-title fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                              <div class="row g-0 row-img">
+                                 <div class="col-xl-4 col-md-6 card-image-div filter-web" >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/9AED0dkCS5baLWCkUFc_A9T9jUawp0k73pA3QJJZjf8/116/1-Chips-Ln-Fishkill-NY-DSCN1554-14-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/9AED0dkCS5baLWCkUFc_A9T9jUawp0k73pA3QJJZjf8/116/1-Chips-Ln-Fishkill-NY-DSCN1554-14-LargeHighDefinition.jpg" class="" title="Web 3"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/cwe5RaKCZ1fCBbC6SRKkjzDBqgR7GrtTVVTABBBQdb4/116/1-Chips-Ln-Fishkill-NY-DSCN1556-15-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/cwe5RaKCZ1fCBbC6SRKkjzDBqgR7GrtTVVTABBBQdb4/116/1-Chips-Ln-Fishkill-NY-DSCN1556-15-LargeHighDefinition.jpg" class="" title="App 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 card-image-div " >
+                                    <div class=" card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/znK2Mw6yhcPCpTKdBO9_Gyz-0n_b5eF3SPWJ8R3GfFA/116/1-Chips-Ln-Fishkill-NY-DSCN1557-16-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/znK2Mw6yhcPCpTKdBO9_Gyz-0n_b5eF3SPWJ8R3GfFA/116/1-Chips-Ln-Fishkill-NY-DSCN1557-16-LargeHighDefinition.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row g-0 row-img">
+                                 <div class="col-xl-4 col-md-6 card-image-div filter-web" >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/hyoH0WCjTD59pLQeR342i8HIyQXZoHZWSFq-RPqsJnA/116/1-Chips-Ln-Fishkill-NY-DSCN1560-18-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/hyoH0WCjTD59pLQeR342i8HIyQXZoHZWSFq-RPqsJnA/116/1-Chips-Ln-Fishkill-NY-DSCN1560-18-LargeHighDefinition.jpg" class="" title="Web 3"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/947WMgMmcM0IGHgZrl1pYzzC7rTh7BcZ2YeI-5whDOE/116/1-Chips-Ln-Fishkill-NY-DSCN1561-19-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/947WMgMmcM0IGHgZrl1pYzzC7rTh7BcZ2YeI-5whDOE/116/1-Chips-Ln-Fishkill-NY-DSCN1561-19-LargeHighDefinition.jpg" class="" title="App 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 card-image-div " >
+                                    <div class="card pt-3 m-2">
                                        <img src="https://images1.loopnet.com/i2/FsvvhQeVkSVo5bAsKZZLQJMS0H1lFkY-yp4iF5qgNZk/116/1-Chips-Ln-Fishkill-NY-DSCN1562-20-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="erico-marcelino-91QHQ3GGh9I-unsplash.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/FsvvhQeVkSVo5bAsKZZLQJMS0H1lFkY-yp4iF5qgNZk/116/1-Chips-Ln-Fishkill-NY-DSCN1562-20-LargeHighDefinition.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="col-xl-4  portfolio-item filter-card" >
-                                    <div class="portfolio-wrap">
+                              </div>
+                              <div class="row g-0 row-img">
+                                 <div class="col-xl-4 col-md-6 card-image-div filter-web" >
+                                    <div class="card pt-3 m-2">
                                        <img src="https://images1.loopnet.com/i2/9ZJzIj-yI6Offd4ICa1UR6E32UT4k0dFiJ4cFeQgYi8/116/1-Chips-Ln-Fishkill-NY-DSCN1565-21-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="kristina-delp-2aox5dyd2SY-unsplash.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/9ZJzIj-yI6Offd4ICa1UR6E32UT4k0dFiJ4cFeQgYi8/116/1-Chips-Ln-Fishkill-NY-DSCN1565-21-LargeHighDefinition.jpg" class="" title="Web 3"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="col-xl-4  portfolio-item filter-web">
-                                    <div class="portfolio-wrap">
-                                       <img src="https://images1.loopnet.com/i2/6U0izfnmRUoxsKAfJLK4XhjM0Omxz0nE9Y1fklkVqWU/116/1-Chips-Ln-Fishkill-NY-DSCN1568-22-LargeHighDefinition.jpg" class="image-class" alt="">
-                                       <div class="portfolio-info">
-                                          <h4></h4>
-                                          <div class="portfolio-links">
-                                             <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                             <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                 <div class="col-xl-4 col-md-6 card-image-div " >
+                                    <div class="card pt-3 m-2">
+                                       <img src="https://images1.loopnet.com/i2/Nw8njdEX1yrtKdUwerkZxqlihsYvZM-5iYnZBbr7TcM/116/1-Chips-Ln-Fishkill-NY-DSCN1571-24-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/Nw8njdEX1yrtKdUwerkZxqlihsYvZM-5iYnZBbr7TcM/116/1-Chips-Ln-Fishkill-NY-DSCN1571-24-LargeHighDefinition.jpg" class="" title="App 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xl-4 col-md-6 card-image-div " >
+                                    <div class="card pt-3 m-2 ">
+                                       <img src="https://images1.loopnet.com/i2/0IyX6IdFEp6_497Y-wXzvlfGHkoPtuumRNCMgZM2jUU/116/1-Chips-Ln-Fishkill-NY-DSCN1576-25-LargeHighDefinition.jpg" class="image-class" alt="">
+                                       <div class="image-info">
+                                          <div class="image-links ">
+                                             <h4 class="text-center nav-blue-color mb-3">Click Links to View Images</h4>
+                                             <a href="https://images1.loopnet.com/i2/0IyX6IdFEp6_497Y-wXzvlfGHkoPtuumRNCMgZM2jUU/116/1-Chips-Ln-Fishkill-NY-DSCN1576-25-LargeHighDefinition.jpg" class="" title="Card 2"><i class="fas fa-images fa-2x"></i></a>
+                                             <a href="images.html" class=""  title=""><i class="fas fa-link fa-2x ps-4 "></i></a>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-
-
-
                            </div>
                         </div>
-
-                                                                         <!--      PICTURES FOR OFFICE -->
-                        <!--       tab pane end and start -->
-                        <div class="tab-pane fade margin-top-title" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-                           <div class="row row-img">
-                              <div class="col-xl-4  portfolio-item filter-app" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/KXw411Cdsbsm3_FGoJyT9XDEVkEAQvacezRGOLwub4o/116/1-Chips-Ln-Fishkill-NY-DSCN1544-7-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-xl-4  portfolio-item filter-web" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/iGzlrSiYX8F1toe7ifHh4sAgZ26tRZL0A4t1LMZknNc/116/1-Chips-Ln-Fishkill-NY-DSCN1539-3-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-xl-4  portfolio-item filter-app">
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/XtkodlOBoaaHvI0PxVJL_j23qSDPZeMz7EkS1KRpFMI/116/1-Chips-Ln-Fishkill-NY-DSCN1543-6-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row g-0 row-img">
-                              <div class="col-xl-4  portfolio-item filter-card" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/SOfENNiK-OiyzqgsOTvSL7vZRANc1p_3nDDZ642vNpM/116/1-Chips-Ln-Fishkill-NY-DSCN1545-8-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-                                                            <div class="col-xl-4  portfolio-item filter-card" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/uFoJc5_-CJIJyGJ7jdJnm0FXXNnzAKCWoLQtM_-TdIM/116/1-Chips-Ln-Fishkill-NY-DSCN1549-10-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-                              <div class="col-xl-4  portfolio-item filter-card" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/OedJJ_VJtV4YPPXO2UC_xXR1spQwnGjE6XiLTi5gtJE/116/1-Chips-Ln-Fishkill-NY-DSCN1592-32-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-
-
-                           </div>
-
-                                                      <div class="row g-0 row-img">
-                              <div class="col-xl-4  portfolio-item filter-card" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/GG1-G4ut74hNusoyK0sh59BUKF_c4xlYm5yDUeaqVxc/116/1-Chips-Ln-Fishkill-NY-DSCN1553-13-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-                                                            <div class="col-xl-4  portfolio-item filter-card" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://ahprd1cdn.csgpimgs.com/i2/vSc9yvqrYFr3m0WrJ0VmAoQFQoxOsDMppEZCenKxbfU/116/image.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-                              <div class="col-xl-4  portfolio-item filter-card" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/N-892rqFHo8FPlwBw0VeECHCpCPnW-ve3788kNPhElE/116/1-Chips-Ln-Fishkill-NY-DSCN1541-5-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-
-
-
-                           </div>
-
-
-                        </div>
-
-
-
-
-
-
-
-                                                                   <!--    PICTURES FOR INDUSTRIAL -->
-                        <!--       tab pane end and start -->
-                        <div class="tab-pane margin-top-title fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                           <div class="row g-0 row-img">
-                              <div class="col-xl-4 col-md-6 portfolio-item filter-web" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/9AED0dkCS5baLWCkUFc_A9T9jUawp0k73pA3QJJZjf8/116/1-Chips-Ln-Fishkill-NY-DSCN1554-14-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-xl-4 col-md-6 portfolio-item filter-app" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/cwe5RaKCZ1fCBbC6SRKkjzDBqgR7GrtTVVTABBBQdb4/116/1-Chips-Ln-Fishkill-NY-DSCN1556-15-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="https://images1.loopnet.com/i2/mR48flvRPyG6tkPLUJjnL93nGYd81oo03unMXiI8AUk/116/1-Elmcroft-Rd-Stamford-CT-Building-Hi-Tech-Lobby-Conference-Room-15-LargeHighDefinition.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-xl-4 col-md-6 portfolio-item filter-card" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/znK2Mw6yhcPCpTKdBO9_Gyz-0n_b5eF3SPWJ8R3GfFA/116/1-Chips-Ln-Fishkill-NY-DSCN1557-16-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-
-                                                      <div class="row g-0 row-img">
-                              <div class="col-xl-4 col-md-6 portfolio-item filter-web" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/hyoH0WCjTD59pLQeR342i8HIyQXZoHZWSFq-RPqsJnA/116/1-Chips-Ln-Fishkill-NY-DSCN1560-18-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-xl-4 col-md-6 portfolio-item filter-app" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/947WMgMmcM0IGHgZrl1pYzzC7rTh7BcZ2YeI-5whDOE/116/1-Chips-Ln-Fishkill-NY-DSCN1561-19-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="https://images1.loopnet.com/i2/mR48flvRPyG6tkPLUJjnL93nGYd81oo03unMXiI8AUk/116/1-Elmcroft-Rd-Stamford-CT-Building-Hi-Tech-Lobby-Conference-Room-15-LargeHighDefinition.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-xl-4 col-md-6 portfolio-item filter-card" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/FsvvhQeVkSVo5bAsKZZLQJMS0H1lFkY-yp4iF5qgNZk/116/1-Chips-Ln-Fishkill-NY-DSCN1562-20-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-
-                                                      <div class="row g-0 row-img">
-                              <div class="col-xl-4 col-md-6 portfolio-item filter-web" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/9ZJzIj-yI6Offd4ICa1UR6E32UT4k0dFiJ4cFeQgYi8/116/1-Chips-Ln-Fishkill-NY-DSCN1565-21-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-xl-4 col-md-6 portfolio-item filter-app" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/Nw8njdEX1yrtKdUwerkZxqlihsYvZM-5iYnZBbr7TcM/116/1-Chips-Ln-Fishkill-NY-DSCN1571-24-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="https://images1.loopnet.com/i2/mR48flvRPyG6tkPLUJjnL93nGYd81oo03unMXiI8AUk/116/1-Elmcroft-Rd-Stamford-CT-Building-Hi-Tech-Lobby-Conference-Room-15-LargeHighDefinition.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-xl-4 col-md-6 portfolio-item filter-card" >
-                                 <div class="portfolio-wrap">
-                                    <img src="https://images1.loopnet.com/i2/0IyX6IdFEp6_497Y-wXzvlfGHkoPtuumRNCMgZM2jUU/116/1-Chips-Ln-Fishkill-NY-DSCN1576-25-LargeHighDefinition.jpg" class="image-class" alt="">
-                                    <div class="portfolio-info">
-                                       <h4></h4>
-                                       <div class="portfolio-links">
-                                          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                          <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-
-
-
-            
-                        </div>
-
-
                      </div>
                   </div>
                </div>
-            </div>
-         </section>
+            </section>
+         </div>
       </div>
-      </div>
-   </body>
-   <div class="clear"></div>
-   <!--Section: Content-->
-   <footer class="footer" id="cntact">
-      <div class="footer-top  " >
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-3 col-md-6 footer-contact text-white-light ">
-                  <h3 class="">Hudson Commercial </h3>
-                  <p class="text-white-light ">
-                     2678 South Rd Ste 103,<br>
-                     Poughkeepsie, NY 12601<br>
-                     United States <br><br>
-                     <strong>Phone:</strong> +1 845 454-1444<br>
-                     <strong>Email:</strong> sam@hudsoncommercial.com<br>
-                  </p>
-               </div>
-               <div class="col-lg-2 col-md-6 footer-links  text-white-light ">
-                  <h4 class="">Useful Links</h4>
-                  <ul>
-                     <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">Home</a></li>
-                     <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">About us</a></li>
-                     <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">Services</a></li>
-                     <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">Terms of service</a></li>
-                     <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">Privacy policy</a></li>
-                  </ul>
-               </div>
-               <div class="col-lg-3 col-md-6 footer-links text-white-light ">
-                  <h4 class="">Our Services</h4>
-                  <ul>
-                     <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Building Management</a></li>
-                     <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Construction Management</a></li>
-                     <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Real Estate Sales</a></li>
-                     <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Real Estate Development</a></li>
-                     <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Real Estate Consulting </a></li>
-                  </ul>
-               </div>
-               <div class="col-lg-3 col-md-6 footer-info text-white-light ">
-                  <h3 class=" text-white-light ">About US</h3>
-                  <p class=" text-white-light ">At Hudson Commercial Real Estate, our goal is to provide you with the leading edge – empowering you with more choices, market knowledge, and superb execution in real estate.</p>
+      <div class="clear position-relative"></div>
+      <!--Section: Content-->
+      <footer class="footer-bottom pt-5" id="contact">
+         <div class="footer-link-div mt-5 pt-4" >
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-3 col-md-6 footer-contact text-white-light ">
+                     <h3 class="">Hudson Commercial </h3>
+                     <p class="text-white-light ">
+                        2678 South Rd Ste 103,<br>
+                        Poughkeepsie, NY 12601<br>
+                        United States <br><br>
+                        <strong>Phone:</strong> +1 845 454-1444<br>
+                        <strong>Email:</strong> sam@hudsoncommercial.com<br>
+                     </p>
+                  </div>
+                  <div class="col-lg-2 col-md-6 footer-links  text-white-light ">
+                     <h4 class="">Useful Links</h4>
+                     <ul>
+                        <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">Home</a></li>
+                        <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">About us</a></li>
+                        <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">Services</a></li>
+                        <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">Terms of service</a></li>
+                        <li><i class="bx bx-chevron-right  text-white-light "></i> <a class=" text-white-light " href="#">Privacy policy</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6 footer-links text-white-light ">
+                     <h4 class="">Our Services</h4>
+                     <ul>
+                        <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Building Management</a></li>
+                        <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Construction Management</a></li>
+                        <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Real Estate Sales</a></li>
+                        <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Real Estate Development</a></li>
+                        <li><i class="bx bx-chevron-right text-white-light "></i> <a class="text-white-light " href="#">Real Estate Consulting </a></li>
+                     </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6 footer-info text-white-light ">
+                     <h3 class=" text-white-light ">About US</h3>
+                     <p class=" text-white-light ">At Hudson Commercial Real Estate, our goal is to provide you with the leading edge – empowering you with more choices, market knowledge, and superb execution in real estate.</p>
+                  </div>
                </div>
             </div>
          </div>
-      </div>
-      <!--Copyright-->
-      <div class="footer-copyright py-3 text-center">
-         <div class="containter-fluid">
-            © 2019 Copyright: <a href="https://hudsoncommercial.com/" class="text-white-light "> HUDSON COMMERCIAL REAL ESTATE CORP.</a>
+         <!--Copyright-->
+         <div class="footer-copyright py-3 text-center">
+            <div class="containter-fluid">
+               © 2019 Copyright: <a href="https://hudsoncommercial.com/" class="text-white-light "> HUDSON COMMERCIAL REAL ESTATE CORP.</a>
+            </div>
          </div>
+         <!--/.Copyright-->
+         </div>
+      </footer>
       </div>
-      <!--/.Copyright-->
       </div>
-   </footer>
-   </div>
    </body>
    <!-- MDB -->
    <script
